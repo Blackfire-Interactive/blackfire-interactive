@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: GPTBot
+Disallow: ChatGPT-User
+Disallow: ClaudeBot
+Disallow: Google-Extended
+Disallow: CCBot
+Disallow: PerplexityBot
+Disallow: Meta-ExternalAgent
+Disallow: Bytespider
