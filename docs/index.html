@@ -3,45 +3,76 @@
     <head>
         <meta lang="en-GB">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/resources/style.css">
-        <link rel="icon" href="/resources/images/favicon.ico">
+
+        <meta property="og:title" content="Blackfire Interactive" />
+        <meta property="og:image" content="resources/images/social-preview.webp" />
+        
         <title> Blackfire Interactive </title>
-        <script src="/resources/script.js"></script>
+        <link rel="icon" type="image/x-icon" href="resources/images/favicon.ico">
+        <link rel="stylesheet" href="resources/styles/style.css">
+        <script src="resources/scripts/script.js"></script>
     </head>
     <body>
-        <div class="hamburger-menu" id="hamburger-menu">
-            <button class="hamburger-button" onclick="toggleHamMenu();"> = </button>
-            <a href="/" class="mobile-button"> Home </a>
-            <a onclick="document.location='/screenshots.html'" class="mobile-button"> Screenshots </a>
-            <a onclick="document.location='/projects.html'" class="mobile-button"> Projects </a>
-            <a onclick="document.location='/links.html'" class="mobile-button"> Links </a>
-            <a onclick="document.location='/socials.html'" class="mobile-button"> Socials </a>
+        <div id="desktop-sidebar">
+            <button class="desktop-sbtn" onclick="SetPage('about'); document.location='#'"> About </button>
+            <button class="desktop-sbtn" onclick="SetPage('games'); document.location='#games'"> Games </button>
+            <button class="desktop-sbtn" onclick="SetPage('links'); document.location='#links'"> Links </button>
+            <button class="desktop-sbtn" onclick="SetPage('contact'); document.location='#contact'"> Contact </button>
         </div>
 
-        <div class="container">
-            <div class="navbar">
-                <a href="/" class="navbar-button"> Home </a>
-                <a onclick="document.location='/screenshots.html'" class="navbar-button"> Screenshots </a>
-                <a onclick="document.location='/projects.html'" class="navbar-button"> Projects </a>
-                <a onclick="document.location='/links.html'" class="navbar-button"> Links </a>
-                <a onclick="document.location='/socials.html'" class="navbar-button" style="margin: 8px;"> Socials </a>
+        <!-- This button uses a custom font - the ! is actually a hamburger icon -->
+        <button id="ham-btn" onclick="ToggleNavmenu();"> ! </button>
 
-                <!-- Logo -->
-                <img src="/resources/images/logo.webp" width="100" height="100" class="logo">
-            </div>
-            
-            <div class="content">
-                <button class="hamburger-button" onclick="toggleHamMenu();"> = </button>
+        <div id="mobile-navmenu">
+            <button class="mobile-sbtn" onclick="SetPage('about'); document.location='#'; ToggleNavmenu();"> About </button>
+            <button class="mobile-sbtn" onclick="SetPage('games'); document.location='#games'; ToggleNavmenu();"> Games </button>
+            <button class="mobile-sbtn" onclick="SetPage('links'); document.location='#links'; ToggleNavmenu();"> Links </button>
+            <button class="mobile-sbtn" onclick="SetPage('contact'); document.location='#contact'; ToggleNavmenu();"> Contact </button>
+        </div>
 
-                <img class="in-page-logo" src="/resources/images/logo.webp" width="100">
-
-                <h1> Blackfire Interactive </h1>
-                <p> We are a small indie development team based in Scotland. </p>
-                <p> We primarily use Unity and C#, but may use different engines in the future. </p>
+        <div id="container">
+            <section id="about">
+                <img src="resources/images/text-logo.webp" id="logo">
+                <p>  We are a small indie game development team from Scotland 
+                <br> We primarily use Unity but might use different engines in the future. </p>
                 <br>
-                <p> Both of our "founders" have our own independent names too, because we didn't want to restrict 
-                    ourselves to only working with each other. You can visit our individual pages from the Links tab. </p>
-            </div>
+                <p> The name "Blackfire Interactive" is derived from the names of our
+                    founders' individual names that we make our own games under. </p>
+                </section>
+
+            <section id="games">
+                <h1> Games </h1>
+                <h2> Last Man Standing </h2>
+                <iframe frameborder="0" src="https://itch.io/embed/3166629?border_width=0&amp;bg_color=000000&amp;fg_color=ffffff&amp;link_color=fb0000&amp;border_color=ffffff" width="550" height="165" class="game-desk"><a href="https://blackfire-interactive.itch.io/last-man-standing">Last Man Standing by Blackfire Interactive</a></iframe>
+                <iframe frameborder="0" src="https://itch.io/embed/3166629?border_width=0&amp;bg_color=000000&amp;fg_color=ffffff&amp;link_color=f90000&amp;border_color=ffffff" width="206" height="165" class="game-mobi"><a href="https://blackfire-interactive.itch.io/last-man-standing">Last Man Standing by Blackfire Interactive</a></iframe>
+            </section>
+
+            <section id="links">
+                <h1> Links </h1>
+                <p> Links to our individual pages. </p>
+                <br>
+                <a class="ext-link" href="https://black-ink-games.blackfire-interactive.co.uk/"> Black Ink Games </a>
+                <a class="ext-link" href="https://blankfiregames.carrd.co/#home"> Blank Fire Games </a>
+            </section>
+
+            <section id="contact">
+                <h1> Contact & Socials </h1>
+                <h2> Direct Contact </h2>
+                <br>
+                <a class="ext-link" href="mailto:info@blackfire-interactive.co.uk"> E-mail </a>
+                <br> <br>
+                <h2> Socials </h2>
+                <br>
+                <a class="ext-link" href="https://blackfire-interactive.itch.io/"> Itch </a>
+                <a class="ext-link" href="https://github.com/Blackfire-Interactive"> GitHub </a>
+                <a class="ext-link" href="https://youtube.com/@BlackfireInteractive"> YouTube </a>
+                <a class="ext-link" href="https://bsky.app/profile/blackfire-interactive.co.uk"> Bluesky </a>
+            </section>
+
+            <section id="nopage">
+                <h1> Error </h1>
+                <p> That page doesn't exist. </p>
+            </section>
         </div>
     </body>
 </html>
